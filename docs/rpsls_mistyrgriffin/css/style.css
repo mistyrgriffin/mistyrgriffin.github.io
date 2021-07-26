@@ -1,0 +1,697 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
+:root {
+  --backgradient: radial-gradient(hsl(214, 47%, 23%),hsl(237, 49%, 15%));
+  --primaryScissors: radial-gradient(hsl(39, 89%, 49%),hsl(40, 84%, 53%));
+  --primaryPaper: radial-gradient(hsl(230, 89%, 62%),hsl(230, 89%, 65%));
+  --primaryRock: radial-gradient(hsl(349, 71%, 52%),hsl(349, 70%, 56%));
+  --primaryLizard: radial-gradient(hsl(261, 73%, 60%),hsl(261, 72%, 63%));
+  --primarySpock: radial-gradient(hsl(189, 59%, 53%),hsl(189, 58%, 57%));
+  --darkText: hsl(229, 25%, 31%);
+  --scoreText: hsl(229, 64%, 46%);
+  --headerOutline: hsl(217, 16%, 45%);
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  margin: auto;
+  padding: 0;
+  width: 375px;
+  height: 85vh;
+}
+
+.hiddenspace {
+  display: none;
+}
+
+.container {
+  background: var(--backgradient);
+  margin: 0;
+  padding: 2em 0;
+  width: 375px;
+  height: 85vh;
+  text-align: center;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  padding: .5em;
+  width: 80%;
+  height: 70px;
+  border: 3px solid #606e85;
+  color: white;
+  font-weight: bold;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: justify;
+  vertical-align: middle;
+  border-radius: 5px;
+}
+
+img.title {
+  height: 90%;
+  margin-top: .35em;
+}
+
+.score-info {
+  position: relative;
+  width: 75px;
+}
+
+.score-info #score-el {
+  position: absolute;
+  background: white;
+  color: #606e85;
+  font-size: 10px;
+  width: 75px;
+  height: 60px;
+  text-align: center;
+  padding-top: 1em;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  z-index: 1;
+}
+
+.score-info #score-num {
+  position: relative;
+  color: #3b4363;
+  z-index: 2;
+  font-size: 40px;
+  margin-top: .5em;
+  text-align: center;
+}
+
+.gamespace {
+  display: block;
+  position: relative;
+}
+
+.gamespace .pentagon-space {
+  position: absolute;
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  margin-left: 5.5em;
+  margin-top: 6em;
+}
+
+.gamespace .pentagon-space .pentagon {
+  width: 100%;
+  height: 100%;
+}
+
+.gamespace .button-grid {
+  position: absolute;
+  display: -ms-grid;
+  display: grid;
+  gap: 0;
+  width: 275px;
+  height: 45vh;
+  margin-top: 3em;
+  margin-left: 1.75em;
+  -ms-grid-columns: (30px)[10];
+      grid-template-columns: repeat(10, 30px);
+  -ms-grid-rows: (30px)[10];
+      grid-template-rows: repeat(10, 30px);
+}
+
+.gamespace .button-grid .mainscissorsbutton {
+  background: radial-gradient(white 50%, #ec9e0e 60%, #eca922 100%);
+  border-radius: 50%;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 3;
+  grid-column: 5 / span 3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  grid-row: 1 / span 3;
+}
+
+.gamespace .button-grid .mainscissorsbutton .mainscissors-img {
+  padding: .5em;
+  width: 35px;
+  height: 35px;
+  z-index: 800;
+  opacity: 100%;
+  border: none;
+  margin-top: 1.25em;
+}
+
+.gamespace .button-grid .mainscissorsbutton .mainscissors-img:hover {
+  cursor: pointer;
+}
+
+.gamespace .button-grid .mainspockbutton {
+  background: radial-gradient(white 50%, #40b9ce 60%, #52bed1 100%);
+  border-radius: 50%;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-column: 2 / span 3;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 3;
+  grid-row: 4 / span 3;
+}
+
+.gamespace .button-grid .mainspockbutton .mainspock-img {
+  padding: .5em;
+  width: 35px;
+  height: 35px;
+  z-index: 800;
+  opacity: 100%;
+  border: none;
+  margin-top: 1.25em;
+}
+
+.gamespace .button-grid .mainspockbutton .mainspock-img:hover {
+  cursor: pointer;
+}
+
+.gamespace .button-grid .mainpaperbutton {
+  background: radial-gradient(white 50%, #5671f5 60%, #414b7c 100%);
+  border-radius: 50%;
+  -ms-grid-column: 8;
+  -ms-grid-column-span: 3;
+  grid-column: 8 / span 3;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 3;
+  grid-row: 4 / span 3;
+}
+
+.gamespace .button-grid .mainpaperbutton .mainpaper-img {
+  padding: .5em;
+  width: 35px;
+  height: 35px;
+  z-index: 800;
+  opacity: 100%;
+  border: none;
+  margin-top: 1.25em;
+}
+
+.gamespace .button-grid .mainpaperbutton .mainpaper-img:hover {
+  cursor: pointer;
+}
+
+.gamespace .button-grid .mainlizardbutton {
+  background: radial-gradient(white 50%, #834fe3 60%, #8c5de5 100%);
+  border-radius: 50%;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 3;
+  grid-column: 3 / span 3;
+  -ms-grid-row: 8;
+  -ms-grid-row-span: 3;
+  grid-row: 8 / span 3;
+}
+
+.gamespace .button-grid .mainlizardbutton .mainlizard-img {
+  padding: .5em;
+  width: 35px;
+  height: 35px;
+  z-index: 800;
+  opacity: 100%;
+  border: none;
+  margin-top: 1.25em;
+}
+
+.gamespace .button-grid .mainlizardbutton .mainlizard-img:hover {
+  cursor: pointer;
+}
+
+.gamespace .button-grid .mainrockbutton {
+  background: radial-gradient(white 50%, #dc2e4e 60%, #dd405d 100%);
+  border-radius: 50%;
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 3;
+  grid-column: 7 / span 3;
+  -ms-grid-row: 8;
+  -ms-grid-row-span: 3;
+  grid-row: 8 / span 3;
+}
+
+.gamespace .button-grid .mainrockbutton .mainrock-img {
+  padding: .5em;
+  width: 35px;
+  height: 35px;
+  z-index: 800;
+  opacity: 100%;
+  border: none;
+  margin-top: 1.25em;
+}
+
+.gamespace .button-grid .mainrockbutton .mainrock-img:hover {
+  cursor: pointer;
+}
+
+.activegame {
+  display: none;
+  position: absolute;
+}
+
+.activegame .activecontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 300px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin-top: -30em;
+  margin-left: 2.25em;
+}
+
+.activegame .activecontainer .yourpick {
+  color: white;
+  width: 125px;
+  padding-top: 2em;
+  margin-left: 1.4em;
+}
+
+.activegame .activecontainer .housepick {
+  color: white;
+  width: 125px;
+  padding-top: 2em;
+}
+
+.activegame .activecontainer .scissorsbutton {
+  background: radial-gradient(white 50%, #ec9e0e 60%, #eca922 100%);
+  border-radius: 50%;
+  width: 125px;
+  height: 125px;
+}
+
+.activegame .activecontainer .scissorsbutton .scissors-img {
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  z-index: 800;
+  opacity: 100%;
+  border: none;
+  margin-top: 2.5em;
+  margin-left: 2.2em;
+}
+
+.activegame .activecontainer .spockbutton {
+  background: radial-gradient(white 50%, #40b9ce 60%, #52bed1 100%);
+  border-radius: 50%;
+  width: 125px;
+  height: 125px;
+}
+
+.activegame .activecontainer .spockbutton .spock-img {
+  padding: 0 2.65em;
+  width: 50px;
+  height: 50px;
+  z-index: 800;
+  opacity: 100%;
+  border: none;
+  margin-top: 2.5em;
+}
+
+.activegame .activecontainer .paperbutton {
+  background: radial-gradient(white 50%, #5671f5 60%, #414b7c 100%);
+  border-radius: 50%;
+  width: 125px;
+  height: 125px;
+}
+
+.activegame .activecontainer .paperbutton .paper-img {
+  padding: 0 .5em 0 0;
+  width: 50px;
+  height: 50px;
+  z-index: 800;
+  opacity: 100%;
+  border: none;
+  margin-top: 2.5em;
+  margin-left: 2.2em;
+}
+
+.activegame .activecontainer .lizardbutton {
+  background: radial-gradient(white 50%, #834fe3 60%, #8c5de5 100%);
+  border-radius: 50%;
+  width: 125px;
+  height: 125px;
+}
+
+.activegame .activecontainer .lizardbutton .lizard-img {
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  z-index: 800;
+  opacity: 100%;
+  border: none;
+  margin-top: 2.5em;
+  margin-left: 2.2em;
+}
+
+.activegame .activecontainer .rockbutton {
+  background: radial-gradient(white 50%, #dc2e4e 60%, #dd405d 100%);
+  border-radius: 50%;
+  width: 125px;
+  height: 125px;
+}
+
+.activegame .activecontainer .rockbutton .rock-img {
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  z-index: 800;
+  opacity: 100%;
+  border: none;
+  margin-top: 2.5em;
+  margin-left: 2.2em;
+}
+
+.activegame .winlosecontainer {
+  display: block;
+  width: 375px;
+  text-align: center;
+}
+
+.activegame .winlosecontainer .winlose {
+  display: none;
+  color: white;
+  margin-top: .5em;
+  font-size: 3em;
+}
+
+.activegame .winlosecontainer button.play {
+  display: none;
+  position: absolute;
+  background: white;
+  color: #3b4363;
+  width: 200px;
+  padding: 1em;
+  letter-spacing: 1.5px;
+  border-radius: 7px;
+  margin-top: 2em;
+  margin-left: 6.5em;
+  font-weight: bold;
+}
+
+.activegame .winlosecontainer button.play:hover {
+  cursor: pointer;
+}
+
+button.rules {
+  position: absolute;
+  background: none;
+  border: 3px solid #606e85;
+  width: 100px;
+  color: white;
+  padding: .5em;
+  letter-spacing: 1.5px;
+  border-radius: 7px;
+  margin-top: -8em;
+  margin-left: 10em;
+}
+
+button.rules:hover {
+  cursor: pointer;
+}
+
+.rulespopup {
+  display: none;
+}
+
+.rulespopup .rulescontainer {
+  position: absolute;
+  z-index: 997;
+  background: white;
+  border: 1px solid #3b4363;
+  border-radius: 8px;
+  width: 375px;
+  height: 75vh;
+  margin-top: -38em;
+}
+
+.rulespopup .rulescontainer p {
+  color: #6a6f81;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 1em;
+  margin-right: 1em;
+}
+
+.rulespopup .rulesimage {
+  background: white;
+  position: absolute;
+  z-index: 998;
+  margin-top: -32em;
+  margin-left: 1.25em;
+}
+
+.rulespopup .closeimage {
+  position: absolute;
+  z-index: 999;
+  margin-top: -8em;
+  margin-left: 11em;
+}
+
+.rulespopup .closeimage:hover {
+  cursor: pointer;
+}
+
+footer {
+  position: absolute;
+  color: white;
+  font-size: 12px;
+  margin-top: -3em;
+  margin-left: 5em;
+}
+
+footer a {
+  color: #3e52a3;
+}
+
+@media only screen and (min-width: 1080px) {
+  body {
+    margin: auto;
+    width: 90%;
+  }
+  .container {
+    background: var(--backgradient);
+    width: 100%;
+    height: 88.5vh;
+    margin: auto;
+  }
+  .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 50%;
+    height: 70px;
+    border: 3px solid #606e85;
+    color: white;
+    font-weight: bold;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    text-align: justify;
+    vertical-align: middle;
+    border-radius: 5px;
+  }
+  .gamespace {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 32%;
+    margin-top: 1em;
+  }
+  .gamespace .pentagon-space {
+    position: absolute;
+    margin: auto;
+    width: 300px;
+    height: 300px;
+    margin-left: 5.5em;
+    margin-top: 6em;
+  }
+  .gamespace .pentagon-space .pentagon {
+    width: 100%;
+    height: 100%;
+  }
+  .gamespace .button-grid {
+    width: 300px;
+    height: 60vh;
+    margin-top: 1.5em;
+    margin-left: 1.5em;
+    -ms-grid-columns: (40px)[10];
+        grid-template-columns: repeat(10, 40px);
+    -ms-grid-rows: (40px)[10];
+        grid-template-rows: repeat(10, 40px);
+  }
+  .gamespace .button-grid .mainscissorsbutton {
+    width: 125px;
+    height: 125px;
+  }
+  .gamespace .button-grid .mainscissorsbutton .mainscissors-img {
+    padding: .5em;
+    width: 50px;
+    height: 50px;
+    margin-top: 1.75em;
+  }
+  .gamespace .button-grid .mainspockbutton {
+    width: 125px;
+    height: 125px;
+  }
+  .gamespace .button-grid .mainspockbutton .mainspock-img {
+    padding: .5em;
+    width: 50px;
+    height: 50px;
+    margin-top: 1.75em;
+  }
+  .gamespace .button-grid .mainpaperbutton {
+    width: 125px;
+    height: 125px;
+  }
+  .gamespace .button-grid .mainpaperbutton .mainpaper-img {
+    padding: .5em;
+    width: 50px;
+    height: 50px;
+    margin-top: 1.75em;
+  }
+  .gamespace .button-grid .mainlizardbutton {
+    width: 125px;
+    height: 125px;
+  }
+  .gamespace .button-grid .mainlizardbutton .mainlizard-img {
+    padding: .5em;
+    width: 50px;
+    height: 50px;
+    margin-top: 1.75em;
+  }
+  .gamespace .button-grid .mainrockbutton {
+    width: 125px;
+    height: 125px;
+  }
+  .gamespace .button-grid .mainrockbutton .mainrock-img {
+    padding: .5em;
+    width: 50px;
+    height: 50px;
+    margin-top: 1.75em;
+  }
+  .activegame {
+    display: block;
+  }
+  .activegame .activecontainer {
+    display: block;
+    margin-top: -30em;
+    margin-left: 21em;
+  }
+  .activegame .activecontainer .yourpick {
+    width: 125px;
+    padding-top: 0;
+    margin-left: 2.75em;
+    margin-top: -16em;
+  }
+  .activegame .activecontainer .housepick {
+    width: 125px;
+    padding-top: 0;
+    margin-left: 35em;
+    margin-top: -1em;
+  }
+  .activegame .activecontainer .yourel {
+    margin-top: 3em;
+  }
+  .activegame .activecontainer .houseel {
+    margin-top: -11em;
+    margin-left: 33em;
+  }
+  .activegame .activecontainer .scissorsbutton {
+    width: 175px;
+    height: 175px;
+  }
+  .activegame .activecontainer .scissorsbutton .scissors-img {
+    padding: 0;
+    width: 75px;
+    height: 75px;
+    margin-top: 3em;
+    margin-left: 3em;
+  }
+  .activegame .activecontainer .spockbutton {
+    width: 175px;
+    height: 175px;
+  }
+  .activegame .activecontainer .spockbutton .spock-img {
+    padding: 0 2.65em;
+    width: 75px;
+    height: 75px;
+    margin-top: 3em;
+    margin-left: 1em;
+  }
+  .activegame .activecontainer .paperbutton {
+    width: 175px;
+    height: 175px;
+  }
+  .activegame .activecontainer .paperbutton .paper-img {
+    padding: 0 .5em 0 0;
+    width: 75px;
+    height: 75px;
+    margin-top: 3em;
+    margin-left: 3em;
+  }
+  .activegame .activecontainer .lizardbutton {
+    width: 175px;
+    height: 175px;
+  }
+  .activegame .activecontainer .lizardbutton .lizard-img {
+    padding: 0;
+    width: 75px;
+    height: 75px;
+    margin-top: 3em;
+    margin-left: 3em;
+  }
+  .activegame .activecontainer .rockbutton {
+    width: 175px;
+    height: 175px;
+  }
+  .activegame .activecontainer .rockbutton .rock-img {
+    padding: 0;
+    width: 75px;
+    height: 75px;
+    margin-top: 3em;
+    margin-left: 3em;
+  }
+  .activegame .winlosecontainer {
+    display: block;
+    width: 375px;
+    text-align: center;
+    margin-left: 31em;
+  }
+  button.rules {
+    position: absolute;
+    background: none;
+    border: 3px solid #606e85;
+    width: 100px;
+    color: white;
+    letter-spacing: 1.5px;
+    border-radius: 7px;
+    margin-left: 80%;
+    margin-top: -4em;
+  }
+  button.rules:hover {
+    cursor: pointer;
+  }
+  .rulespopup {
+    position: absolute;
+    margin-left: 33%;
+    margin-top: -1.5em;
+  }
+  footer {
+    position: absolute;
+    color: white;
+    font-size: 12px;
+    margin-left: 5%;
+  }
+  footer a {
+    color: #3e52a3;
+  }
+}
+/*# sourceMappingURL=style.css.map */
