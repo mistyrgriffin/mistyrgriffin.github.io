@@ -36,7 +36,7 @@ html, body {
 }
 
 .outermost-container .leftsidebar-container ul {
-  padding-top: 1em;
+  padding-top: 0;
 }
 
 .outermost-container .leftsidebar-container a {
@@ -121,6 +121,7 @@ html, body {
           justify-content: center;
   width: 100%;
   height: 200px;
+  padding-bottom: 1em;
 }
 
 .outermost-container .maincontent-container .aboutme-container .textboxes {
@@ -199,6 +200,12 @@ html, body {
   height: 350px;
 }
 
+.outermost-container .maincontent-container .portfolio-container .portfolio-carousel .comingsoon {
+  color: white;
+  padding: 0 3em;
+  text-shadow: 2px 2px 2px black;
+}
+
 .outermost-container .maincontent-container .contact-section {
   display: block;
 }
@@ -214,7 +221,7 @@ html, body {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  height: 400px;
+  height: 300px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -257,26 +264,24 @@ html, body {
 }
 
 .outermost-container .maincontent-container .contactme-container .socialmedia-container {
+  display: -ms-grid;
+  display: grid;
+  gap: 0;
   text-align: center;
   width: 50%;
-  margin-right: 2em;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
 }
 
 .outermost-container .maincontent-container .contactme-container .socialmedia-container p {
-  margin-bottom: 3em;
+  display: none;
 }
 
 .outermost-container .maincontent-container .contactme-container .socialmedia-container a {
-  background: var(--primarycolor);
   text-decoration: none;
-  padding: 2em;
-  margin: 1em;
-  border-radius: 50%;
-}
-
-.outermost-container .maincontent-container .contactme-container .socialmedia-container .fa {
-  width: 2em;
-  height: 2em;
+  font-size: 1.5em;
 }
 
 .outermost-container .maincontent-container footer {
