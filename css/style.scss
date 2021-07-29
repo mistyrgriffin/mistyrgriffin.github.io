@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --primarycolor: rgb(163, 199, 219);
+    --secondarycolor: ;
+    --accentcolor: ;
+    --textcolor: rgb(80, 80, 163);
+}
+
+html, body {
+    position: relative;
+    scroll-behavior: smooth;
+    font-family: Poppins, sans-serif;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.outermost-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    .leftsidebar-container {
+        background: white;
+        position: fixed;
+        border-right: 1px solid var(--textcolor);
+        width: 150px;
+        height: 100%;
+        z-index: 999;
+
+        ul {
+            padding-top: 1em;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--textcolor);
+            font-weight: bold;
+            font-size: 1.25em;
+        }
+
+        li {
+            list-style-type: none;
+            padding-top: .25em;
+        }
+
+        .badgescontainer {
+            display: none;
+            color: var(--textcolor);
+            font-weight: bold;
+            font-size: 1.25em;
+            margin-left: 2em;
+            margin-top: 1em;
+        }
+    }
+
+    .maincontent-container {
+        display: block;
+        width: 100%;
+        height: 100%;
+        margin-left: 150px;
+        padding: 0;
+
+        .header-container {
+            display: block;
+            position: relative;
+            width: 100%;
+            height: 200px;
+            margin-top: -3em;
+            margin-bottom: 1em;
+            padding: 0;
+
+            img {
+                position: absolute;
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+                z-index: -2;
+            }
+    
+            .headeroverlay {
+                background: white;
+                position: absolute;
+                width: 100%;
+                height: 200px;
+                opacity: 50%;
+                z-index: -1;
+            }
+
+            h1 {
+                color: white;
+                padding-top: .5em;
+                text-align: center;
+                font-size: 4em;
+                text-shadow: 2px 2px 2px black;
+            }
+
+            h2 {
+                color: white;
+                margin-top: -1.5em;
+                text-align: center;
+                font-size: 2em;
+                text-shadow: 2px 2px 2px black;
+            }
+        }
+
+        .aboutme-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 200px;
+
+            .textboxes {
+                display: flex;
+                width: 90%;
+                height: 100%;
+                text-align: justify;
+
+                span {
+                    font-weight: bold;
+                    color: var(--textcolor);
+                }
+
+                .experience {
+                    padding: 0 1.25em;
+                }
+                .skillset {
+                    border-left: 1px solid var(--textcolor);
+                    border-right: 1px solid var(--textcolor);
+                    padding: 0 1.25em;
+                }
+                .goals {
+                    padding: 0 1.25em;
+                }
+            }
+        }
+
+        .portfolio-container {
+            display: block;
+            position: relative;
+            text-align: center;
+            width: 100%;
+            height: 500px;
+
+            .portfoliooverlay {
+                background: var(--primarycolor);
+                position: absolute;
+                width: 100%;
+                height: 500px;
+                opacity: 40%;
+                z-index: -1;
+            }
+
+            h2 {
+                color: white;
+                text-align: center;
+                font-size: 2em;
+                text-shadow: 2px 2px 2px black;
+                padding-top: .5em;
+            }
+
+            .portfolio-carousel {
+                display: flex;
+                justify-content: center;
+                text-align: center;
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                    padding: 0 3em;
+                    text-shadow: 2px 2px 2px black;
+                }
+
+                img {
+                    border-radius: 10px;
+                    width: 250px;
+                    height: 350px;
+                }
+            }
+        }
+
+        .contact-section {
+            display: block;
+
+            p {
+                color: var(--textcolor);
+                font-weight: bold;
+                margin-left: 5em;
+            }
+        }
+        .contactme-container {
+            display: flex;
+            width: 100%;
+            height: 400px;
+            justify-content: center;
+
+            form {
+                display: block;
+                width: 50%;
+                margin-left: 5em;
+                margin-right: .5em;
+    
+                input {
+                    display: block;
+                    width: 600px;
+                    height: 20px;
+                    margin-bottom: 1em;
+                    padding: .5em;
+                    border: 1px solid var(--textcolor);
+                }
+    
+                textarea {
+                    display: block;
+                    width: 600px;
+                    height: 100px;
+                    padding: .5em;
+                    border: 1px solid var(--textcolor);
+                }
+    
+                button {
+                    display: block;
+                    background: var(--textcolor);
+                    color: white;
+                    font-weight: bold;
+                    padding: .5em;
+                    width: 100px;
+                    letter-spacing: 2px;
+                    margin-top: 1em;
+                    border-radius: 5px;
+                }
+            }
+            
+            .socialmedia-container {
+                text-align: center;
+                width: 50%;
+                margin-right: 2em;
+    
+                p {
+                    margin-bottom: 3em;
+                }
+    
+                a {
+                    background: var(--primarycolor);
+                    text-decoration: none;
+                    padding: 2em;
+                    margin: 1em;
+                    border-radius: 50%;
+                }
+    
+                .fa {
+                    width: 2em;
+                    height: 2em;
+                }
+            }
+        }
+
+        footer {
+            bottom: 0;
+            width: 100%;
+            height: 25px;
+        
+            p {
+                color: var(--textcolor);
+                margin: 0;
+                padding: 0;
+                text-align: center;
+            }
+        }
+    }
+}
