@@ -16,6 +16,10 @@ html, body {
   padding: 0;
 }
 
+.mobile-header {
+  display: none;
+}
+
 .outermost-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -116,12 +120,14 @@ html, body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-  height: 200px;
+  height: 250px;
   padding-bottom: 1em;
+  margin-bottom: 1em;
 }
 
 .outermost-container .maincontent-container .aboutme-container .textboxes {
@@ -129,8 +135,9 @@ html, body {
   display: -ms-flexbox;
   display: flex;
   width: 90%;
-  height: 100%;
+  height: auto;
   text-align: justify;
+  margin-bottom: 1em;
 }
 
 .outermost-container .maincontent-container .aboutme-container .textboxes span {
@@ -140,16 +147,19 @@ html, body {
 
 .outermost-container .maincontent-container .aboutme-container .textboxes .experience {
   padding: 0 1.25em;
+  margin-bottom: .5em;
 }
 
 .outermost-container .maincontent-container .aboutme-container .textboxes .skillset {
   border-left: 1px solid var(--textcolor);
   border-right: 1px solid var(--textcolor);
   padding: 0 1.25em;
+  margin-bottom: .5em;
 }
 
 .outermost-container .maincontent-container .aboutme-container .textboxes .goals {
   padding: 0 1.25em;
+  margin-bottom: .5em;
 }
 
 .outermost-container .maincontent-container .portfolio-container {
@@ -158,6 +168,7 @@ html, body {
   text-align: center;
   width: 100%;
   height: 500px;
+  margin-top: .5em;
 }
 
 .outermost-container .maincontent-container .portfolio-container .portfoliooverlay {
@@ -167,6 +178,7 @@ html, body {
   height: 500px;
   opacity: 40%;
   z-index: -1;
+  margin-top: .5em;
 }
 
 .outermost-container .maincontent-container .portfolio-container h2 {
@@ -175,6 +187,7 @@ html, body {
   font-size: 2em;
   text-shadow: 2px 2px 2px black;
   padding-top: .5em;
+  margin-top: .5em;
 }
 
 .outermost-container .maincontent-container .portfolio-container .portfolio-carousel {
@@ -299,5 +312,315 @@ html, body {
   margin: 0;
   padding: 0;
   text-align: center;
+}
+
+@media only screen and (max-width: 1260px) {
+  body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .outermost-container {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .outermost-container .leftsidebar-container {
+    display: none;
+    position: absolute;
+    border: none;
+    width: 0px;
+    height: 25%;
+    z-index: 999;
+    margin-top: 1em;
+  }
+  .outermost-container .leftsidebar-container ul {
+    padding-top: 0;
+    margin: 0;
+    width: 0px;
+  }
+  .outermost-container .leftsidebar-container a {
+    text-decoration: none;
+    color: var(--textcolor);
+    font-weight: bold;
+    font-size: 1.25em;
+    width: 0px;
+  }
+  .outermost-container .leftsidebar-container li {
+    list-style-type: none;
+    padding-top: .25em;
+    width: 0px;
+  }
+  .outermost-container .leftsidebar-container .badgescontainer {
+    display: none;
+    color: var(--textcolor);
+    font-weight: bold;
+    font-size: 1.25em;
+    width: 0px;
+  }
+  .outermost-container .maincontent-container {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-top: 3em;
+    margin-left: 0;
+  }
+  .outermost-container .maincontent-container .mobile-header {
+    display: block;
+    position: fixed;
+    width: 50%;
+    height: 31%;
+    margin-left: 1em;
+    margin-top: 1.5em;
+    z-index: 999;
+  }
+  .outermost-container .maincontent-container .mobile-header #mobile-menu-btn {
+    width: 25px;
+    height: 30px;
+  }
+  .outermost-container .maincontent-container .mobile-header #mobile-menu-btn:hover {
+    cursor: pointer;
+  }
+  .outermost-container .maincontent-container .mobile-header .mobile-menu-popup {
+    display: none;
+    position: fixed;
+    background: var(--primarycolor);
+    margin-top: -.5em;
+    width: 100px;
+    height: 180px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  .outermost-container .maincontent-container .mobile-header .mobile-menu-content {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+  }
+  .outermost-container .maincontent-container .mobile-header .mobile-menu-content a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px black;
+  }
+  .outermost-container .maincontent-container .mobile-header .mobile-menu-content #mobile-exit-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 1.5em;
+    margin-top: 1em;
+    width: 15px;
+    height: 15px;
+    -webkit-box-shadow: 2px 2px 2px var(--textcolor);
+            box-shadow: 2px 2px 2px var(--textcolor);
+  }
+  .outermost-container .maincontent-container .mobile-header .mobile-menu-content #mobile-exit-btn:hover {
+    cursor: pointer;
+  }
+  .outermost-container .maincontent-container .header-container {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+  .outermost-container .maincontent-container .header-container .headerbackground-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    z-index: -2;
+  }
+  .outermost-container .maincontent-container .header-container .headeroverlay {
+    background: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 50%;
+    z-index: -1;
+  }
+  .outermost-container .maincontent-container .header-container h1 {
+    color: white;
+    padding-top: .5em;
+    text-align: center;
+    font-size: 2em;
+    text-shadow: 2px 2px 2px black;
+  }
+  .outermost-container .maincontent-container .header-container h2 {
+    color: white;
+    margin-top: -1em;
+    padding-bottom: 1em;
+    text-align: center;
+    font-size: 1em;
+    text-shadow: 2px 2px 2px black;
+  }
+  .outermost-container .maincontent-container .aboutme-container {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .outermost-container .maincontent-container .aboutme-container .textboxes {
+    display: block;
+    width: 90%;
+    height: auto;
+    margin-left: 1.5em;
+  }
+  .outermost-container .maincontent-container .aboutme-container .textboxes span {
+    font-weight: bold;
+    color: var(--textcolor);
+  }
+  .outermost-container .maincontent-container .aboutme-container .textboxes .experience {
+    padding: 0 1.25em;
+    height: auto;
+  }
+  .outermost-container .maincontent-container .aboutme-container .textboxes .skillset {
+    border: none;
+    padding: 0 1.25em;
+    height: auto;
+  }
+  .outermost-container .maincontent-container .aboutme-container .textboxes .goals {
+    padding: 0 1.25em;
+    height: auto;
+    margin-bottom: 1em;
+  }
+  .outermost-container .maincontent-container .portfolio-container {
+    display: block;
+    text-align: center;
+    width: 100%;
+    height: 1300px;
+    margin-bottom: 2em;
+  }
+  .outermost-container .maincontent-container .portfolio-container .portfoliooverlay {
+    background: var(--primarycolor);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 40%;
+    z-index: -1;
+    margin-bottom: 2em;
+  }
+  .outermost-container .maincontent-container .portfolio-container h2 {
+    color: white;
+    text-align: center;
+    font-size: 2em;
+    text-shadow: 2px 2px 2px black;
+    padding-top: .5em;
+  }
+  .outermost-container .maincontent-container .portfolio-container .portfolio-carousel {
+    display: block;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    width: 350px;
+    margin: auto;
+  }
+  .outermost-container .maincontent-container .portfolio-container .portfolio-carousel a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    margin-bottom: 1em;
+  }
+  .outermost-container .maincontent-container .portfolio-container .portfolio-carousel img {
+    display: block;
+    border-radius: 10px;
+    width: 250px;
+    height: 350px;
+    margin-top: .5em;
+  }
+  .outermost-container .maincontent-container .portfolio-container .portfolio-carousel .comingsoon {
+    display: block;
+    color: white;
+    padding: 0 3em;
+    text-shadow: 2px 2px 2px black;
+  }
+  .outermost-container .maincontent-container .contact-section {
+    display: block;
+    width: 100%;
+  }
+  .outermost-container .maincontent-container .contact-section p.contact-title {
+    color: var(--textcolor);
+    font-weight: bold;
+    margin: 0;
+    margin-top: 1em;
+    text-align: center;
+  }
+  .outermost-container .maincontent-container .contact-section form {
+    display: block;
+    width: 100%;
+    margin: auto;
+  }
+  .outermost-container .maincontent-container .contact-section form input {
+    display: block;
+    width: 95%;
+    height: 20px;
+    border: 1px solid var(--textcolor);
+    margin: auto;
+    margin-top: .5em;
+  }
+  .outermost-container .maincontent-container .contact-section form textarea {
+    display: block;
+    width: 95%;
+    height: 100px;
+    border: 1px solid var(--textcolor);
+    margin: auto;
+    margin-top: .5em;
+  }
+  .outermost-container .maincontent-container .contact-section form button {
+    display: block;
+    background: var(--textcolor);
+    color: white;
+    font-weight: bold;
+    width: 100px;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 2em;
+  }
+  .outermost-container .maincontent-container .contact-section form button:hover {
+    cursor: pointer;
+  }
+  .outermost-container .maincontent-container .contact-section .socialmedia-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    margin-top: 21em;
+    gap: 25px;
+  }
+  .outermost-container .maincontent-container .contact-section .socialmedia-container a {
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.5em;
+  }
+  .outermost-container .maincontent-container footer {
+    bottom: 0;
+    width: 100%;
+    height: 25px;
+  }
+  .outermost-container .maincontent-container footer p {
+    color: var(--textcolor);
+    margin: 0;
+    margin-top: 10em;
+    padding: 0 0 .5em 0;
+    text-align: center;
+  }
 }
 /*# sourceMappingURL=style.css.map */

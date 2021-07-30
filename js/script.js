@@ -1,4 +1,15 @@
-var frmvalidator = new Validator("contactform");
-frmvalidator.addValidation("name","req","Please provide your name.");
-frmvalidator.addValidation("email","req","Please provide your email.");
-frmvalidator.addValidation("email","email","Please enter a valid email address.");
+var mobileMenuBtn = document.getElementById("mobile-menu-btn");
+var mobileMenuExit = document.getElementById("mobile-exit-btn");
+var mobileHeader = document.getElementById("mobileheader");
+var mobilePopUp = document.getElementById("mobile-popup");
+
+
+
+function mobileMenu() {
+    if(mobilePopUp.style.display === "none") {
+        mobilePopUp.style.display = "block"
+    } else {
+        mobilePopUp.style.display = "none"
+    }
+}
+mobileMenu();
