@@ -263,6 +263,10 @@ html, body {
   border-radius: 5px;
 }
 
+.outermost-container .maincontent-container .contactme-container form button:hover {
+  cursor: pointer;
+}
+
 .outermost-container .maincontent-container .contactme-container .socialmedia-container {
   display: -ms-grid;
   display: grid;
