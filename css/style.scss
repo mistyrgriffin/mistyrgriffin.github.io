@@ -51,15 +51,6 @@ html, body {
             list-style-type: none;
             padding-top: .25em;
         }
-
-        .badgescontainer {
-            display: none;
-            color: var(--textcolor);
-            font-weight: bold;
-            font-size: 1.25em;
-            margin-left: 2em;
-            margin-top: 1em;
-        }
     }
 
     .maincontent-container {
@@ -335,14 +326,6 @@ html, body {
             li {
                 list-style-type: none;
                 padding-top: .25em;
-                width: 0px;
-            }
-    
-            .badgescontainer {
-                display: none;
-                color: var(--textcolor);
-                font-weight: bold;
-                font-size: 1.25em;
                 width: 0px;
             }
         }
