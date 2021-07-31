@@ -1,7 +1,7 @@
-var mobileMenuBtn = document.getElementById("mobile-menu-btn");
-var mobileMenuExit = document.getElementById("mobile-exit-btn");
-var mobileHeader = document.getElementById("mobileheader");
-var mobilePopUp = document.getElementById("mobile-popup");
+const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+const mobileMenuExit = document.getElementById("mobile-exit-btn");
+const mobileHeader = document.getElementById("mobileheader");
+const mobilePopUp = document.getElementById("mobile-popup");
 
 
 
