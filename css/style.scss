@@ -125,12 +125,12 @@ html, body {
                 }
 
                 .experience {
-                    border-left: 1px solid var(--textcolor);
-                    border-right: 1px solid var(--textcolor);
                     padding: 0 1.25em;
                     margin-bottom: .5em;
                 }
                 .skillset {
+                    border-left: 1px solid var(--textcolor);
+                    border-right: 1px solid var(--textcolor);
                     padding: 0 1.25em;
                     margin-bottom: .5em;
                 }
@@ -433,6 +433,10 @@ html, body {
                     text-align: center;
                     font-size: 1em;
                     text-shadow: 2px 2px 2px black;
+                }
+
+                .profilepic {
+                    display: none;
                 }
             }
     

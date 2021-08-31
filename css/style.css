@@ -137,13 +137,13 @@ html, body {
 }
 
 .outermost-container .maincontent-container .aboutme-container .textboxes .experience {
-  border-left: 1px solid var(--textcolor);
-  border-right: 1px solid var(--textcolor);
   padding: 0 1.25em;
   margin-bottom: .5em;
 }
 
 .outermost-container .maincontent-container .aboutme-container .textboxes .skillset {
+  border-left: 1px solid var(--textcolor);
+  border-right: 1px solid var(--textcolor);
   padding: 0 1.25em;
   margin-bottom: .5em;
 }
@@ -448,6 +448,9 @@ html, body {
     text-align: center;
     font-size: 1em;
     text-shadow: 2px 2px 2px black;
+  }
+  .outermost-container .maincontent-container .header-container .profilepic {
+    display: none;
   }
   .outermost-container .maincontent-container .aboutme-container {
     display: block;
