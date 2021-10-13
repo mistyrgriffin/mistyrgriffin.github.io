@@ -36,7 +36,6 @@
                         <img id="mobile-exit-btn" src="images/exit.svg" alt="Exit icon" onclick="mobileMenu()">
                     </div>
                 </div>
-                <script src="js/script.js"></script>
             </div>
             <header id="home-section" class="header-container">
                 <img class="headerbackground-image" src="images/headerimg.jfif" alt="Computer screen with programming language">
@@ -52,12 +51,34 @@
                 </div>
             </div>
             <div id="portfolio-section" class="portfolio-container">
-                <div class="portfoliooverlay"></div>
                 <h2>PORTFOLIO</h2>
-                <div class="portfolio-carousel">
-                    <a href="https://mistyrgriffin.github.io/frontendmentorchallenge_rcapi/" target="_blank" class="rcapi-challenge">REST Countries API<br><img id="restcountriesimage" src="images/restcountriesapiimg.jpg" alt="REST Countries website image"></a>
-                    <a href="https://mistyrgriffin.github.io/frontendmentorchallenge_rpsls/" target="_blank" class="rpsls-challenge">Rock, Paper, Scissors Game<br><img id="rpslsimage" src="images/rpsls_mistygriffin.png" alt="Rock, Paper, Scissors game image"></a>
-                    <a href="https://mistyrgriffin.github.io/codepenchallenge_cafe/" target="_blank" class="cc-codepen-challenge">Cascade Cafe Menu<br><img id="cafeimage" src="images/cascadecafe_mistyrgriffin.png" alt="Coffee shop website image"></a>
+                <div class="carousel">
+                    <button class="carousel-button carousel-button-left is-hidden"><</button>
+                        <div class="carousel-track-container">
+                            <ul class="carousel-track">
+                                <li class="carousel-slide current-slide">
+                                    <a href="https://mistyrgriffin.github.io/frontendmentorchallenge_rcapi/" target="_blank">REST Countries API
+                                        <img class="carousel-image" src="images/restcountriesapiimg.jpg" alt="REST Countries website image">
+                                    </a>
+                                </li>
+                                <li class="carousel-slide">
+                                    <a href="https://mistyrgriffin.github.io/frontendmentorchallenge_rpsls/" target="_blank">Rock, Paper, Scissors Game<br>
+                                        <img class="carousel-image" src="images/rpsls_mistygriffin.png" alt="Rock, Paper, Scissors game image">
+                                    </a>
+                                </li>
+                                <li class="carousel-slide">
+                                    <a href="https://mistyrgriffin.github.io/codepenchallenge_cafe/" target="_blank">Cascade Cafe Menu<br>
+                                        <img class="carousel-image" src="images/cascadecafe_mistyrgriffin.png" alt="Coffee shop website image">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    <button class="carousel-button carousel-button-right">></button>
+                    <div class="carousel-nav">
+                        <button class="carousel-indicator current-slide"></button>
+                        <button class="carousel-indicator"></button>
+                        <button class="carousel-indicator"></button>
+                    </div>
                 </div>
             </div>
             <div class="contact-section">
@@ -85,5 +106,6 @@
             </footer>
         </div>
     </div>
+<script src="js/script.js"></script>
 </body>
 </html>
