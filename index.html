@@ -12,106 +12,124 @@
     <script src="js/script.js"></script>
     <title>Misty R. Griffin</title>
 </head>
-<body>
-    <div class="outermost-container">
-        <div class="leftsidebar-container">
-            <ul class="menu-container">
-                <li><a href="#home-section">Home</a></li>
-                <li><a href="#about-section">About</a></li>
-                <li><a href="#portfolio-section">Portfolio</a></li>
-                <li><a href="#contact-section">Contact</a></li>
-                <li><a href="assets/Misty Griffin Resume.pdf" target="_blank" class="myresumelink">Resume</a></li>
-            </ul>
-        </div>
-        <div class="maincontent-container">
-            <div id="mobileheader" class="mobile-header">
-                <img id="mobile-menu-btn" src="images/menu.svg" alt="Menu icon" onclick="mobileMenu()">
-                <div id="mobile-popup" class="mobile-menu-popup">
-                    <div class="mobile-menu-content">
-                        <a href="#home-section">Home</a>
-                        <a href="#about-section">About</a>
-                        <a href="#portfolio-section">Portfolio</a>
-                        <a href="#contact-section">Contact</a>
-                        <a href="assets/Misty Griffin Resume.pdf" target="_blank" class="myresumelink">Resume</a>
-                        <img id="mobile-exit-btn" src="images/exit.svg" alt="Exit icon" onclick="mobileMenu()">
+    <body class="scrollable-element">
+        <header>
+            <nav class="container-nav-bar">
+                <div class="container-nav-menu">
+                    <ul class="menu-links">
+                        <li><a href="#about-section">About</a></li>
+                        <li><a href="#portfolio-section">Portfolio</a></li>
+                        <li><a href="#contact-section">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="container-nav-logo">
+                    <img class="logo" src="images/mistyrgriffin.jpg" alt="profile photo of Misty Griffin">
+                </div>
+                <div class="container-nav-icons">
+                    <a href="mailto:mistyrgriffin@gmail.com" target="_blank" class="fa fa-envelope"></a>
+                    <a href="https://www.linkedin.com/in/mistyrgriffin/" target="_blank" class="fa fa-linkedin"></a>
+                    <a href="https://github.com/mistyrgriffin" target="_blank" class="fa fa-github"></a>
+                    <a href="https://twitter.com/MistyRGriffin" target="_blank" class="fa fa-twitter"></a>
+                </div>
+            </nav>
+            <div class="container-hero">
+                <div class="container-hero-visual-elements">
+                    <video autoplay loop muted poster="images/headerimg.jfif">
+                        <source src="images/codingvid.mp4" type="video/mp4" alt="animated video of a computer screen with programming language being typed">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="container-hero-content">
+                    <h1 class="hero-name">I'm <span class="misty-griffin">Misty Griffin</span></h1>
+                    <p class="hero-greeting">Hello,</p>
+                    <p class="hero-text">I am a former English teacher turned front-end developer focused on creating user-friendly experiences on the web. I am passionate about developing software and websites that improve the lives of Internet users everywhere.</p>
+                    <a class="hero-btn-link" href="assets/Misty Griffin Resume.pdf" target="_blank">Download Resume</a>
+                </div>
+            </div>
+            <div class="container-page-divider">
+                <img class="computer-desk" src="images/computerdesk.jpg" alt="computer desk with laptop and desk supplies">
+            </div>
+        </header>
+        <main class="container-main">
+            <div id="about-section" class="container-about">
+                <div class="container-text container-about-me">
+                    <h2 class="about-me">About Me</h2>
+                    <p class="description about-me-text">I am a self-taught developer looking for opportunities to grow my skillset in a professional environment. My strengths are in HTML, CSS, JavaScript (including ES6), React (with context and hooks), and SEO. I am in the process of learning PHP and MySQL to create full-stack development projects.</p>
+                </div>
+                <div class="container-text container-education-experience">
+                    <h2 class="education-experience">Education & Experience</h2>
+                    <p class="description education-experience-text">I hold a bachelor's degree from the University of Texas at Austin where I majored in French and minored in Japanese. I also hold a Texas state teaching certificate, and I taught English and Special Education for fourteen years where regular use of educational technology and apps sparked my love for web design and development. I am currently a part-time Virtual Webmaster for School Webmasters, LLC. It is a role focused on coordinating with clients to modify existing website content through the company content management system (CMS). View<a class="embedded-link" href="assets/Misty Griffin Resume.pdf" target="_blank">my resume</a>for more information.</p>
+                </div>
+            </div>
+            <div class="container-contact-portfolio">
+                <div id="contact-section" class="container-contact">
+                    <h2 class="contact-me">Contact Me</h2>
+                    <div id="contact-form" class="container-contact-form">
+                        <form action="https://formsubmit.co/mistyrgriffin@gmail.com" method="POST">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_next" value="http://www.mistyrgriffin.com">
+                            <input type="text" name="name" placeholder="Name*" required>
+                            <input type="email" name="email" placeholder="Email*" required>
+                            <textarea name="message" id="message" placeholder="Message" cols="30" rows="10"></textarea>
+                            <button type="submit">SEND</button>
+                        </form>
                     </div>
                 </div>
-            </div>
-            <header id="home-section" class="header-container">
-                <img class="headerbackground-image" src="images/headerimg.jfif" alt="Computer screen with programming language">
-                <div class="headeroverlay"></div>
-                <h1>Misty R. Griffin</h1>
-                <h2>Web Developer</h2>
-            </header>
-            <div id="about-section" class="aboutme-container">
-                <div class="textboxes">
-                    <p class="experience"><span>EXPERIENCE</span><br>Proofreading, revising, editing, and scrupulous attention to detail are skills I possess from my previous positions as an educator and web/database administrator. In addition to a strong work ethic, I have an excellent reputation for working efficiently, often completing tasks and projects ahead of schedule while maintaining high quality and accuracy.</p>
-                    <p class="skillset"><span>SKILLS</span><br>I am self-taught with courses in HTML, CSS, JavaScript, and Python. Also, I am currently taking courses in React, AdobeXD, PHP, and MySQL. I regularly code challenges and projects to continuously improve my web development skills.</p>
-                    <p class="goals"><span>GOALS</span><br>I am looking for an opportunity to enhance my web development skills by working with a team that runs on clear communication. I want to align myself with a company I believe in and where I can make valuable contributions. I am always looking to learn more and am open to taking on challenging projects.</p>
-                </div>
-            </div>
-            <div id="portfolio-section" class="portfolio-container">
-                <h2>PORTFOLIO</h2>
-                <div class="carousel">
-                    <button class="carousel-button carousel-button-left is-hidden"><</button>
-                        <div class="carousel-track-container">
-                            <ul class="carousel-track">
-                                <li class="carousel-slide current-slide">
-                                    <a href="https://mistyrgriffin.github.io/frontendmentorchallenge_rcapi/" target="_blank">REST Countries API
-                                        <img class="carousel-image" src="images/restcountriesapiimg.jpg" alt="REST Countries website image">
-                                    </a>
-                                </li>
-                                <li class="carousel-slide">
-                                    <a href="https://mistyrgriffin.github.io/frontendmentorchallenge_rpsls/" target="_blank">Rock, Paper, Scissors Game<br>
-                                        <img class="carousel-image" src="images/rpsls_mistygriffin.png" alt="Rock, Paper, Scissors game image">
-                                    </a>
-                                </li>
-                                <li class="carousel-slide">
-                                    <a href="https://mistyrgriffin.github.io/snakegame/" target="_blank">Snake Game<br>
-                                        <img class="carousel-image" src="images/snakegame_mistyrgriffin.png" alt="Snake game image">
-                                    </a>
-                                </li>
-                                <li class="carousel-slide">
-                                    <a href="https://mistyrgriffin.github.io/codepenchallenge_cafe/" target="_blank">Cascade Cafe Menu<br>
-                                        <img class="carousel-image" src="images/cascadecafe_mistyrgriffin.png" alt="Coffee shop website image">
-                                    </a>
-                                </li>
-                            </ul>
+                <div id="portfolio-section" class="container-portfolio">
+                    <h2>Portfolio</h2>
+                    <div class="carousel">
+                        <button class="carousel-button carousel-button-left is-hidden">< Previous</button>
+                            <div class="carousel-track-container">
+                                <ul class="carousel-track">
+                                    <li class="carousel-slide current-slide">
+                                        <h3 class="slide-title">REST Countries API</h3>
+                                        <p class="slide-description">Frontend Mentor advanced challenge that I completed using HTML, CSS, Vanilla JavaScript, and API. It features a dark/light theme change, search box, and dropdown filter.</p>
+                                        <a href="https://mistyrgriffin.github.io/frontendmentorchallenge_rcapi/" target="_blank"><img class="carousel-image" src="images/restcountriesapiimg.jpg" alt="REST Countries website image">
+                                        </a>
+                                    </li>
+                                    <li class="carousel-slide">
+                                        <h3 class="slide-title">Rock, Paper, Scissors</h3>
+                                        <p class="slide-description">Frontend Mentor advanced challenge that I completed using HTML, CSS, Vanilla JavaScript, Flexbox, and Grid. It features a pentagonal-shaped game interface and gradient borders.</p>
+                                        <a href="https://mistyrgriffin.github.io/frontendmentorchallenge_rpsls/" target="_blank"><img class="carousel-image" src="images/rpsls_mistygriffin.png" alt="Rock, Paper, Scissors game image">
+                                        </a>
+                                    </li>
+                                    <li class="carousel-slide">
+                                        <h3 class="slide-title">Snake Game</h3>
+                                        <p class="slide-description">JavaScript challenge that I completed using HTML, CSS, and Vanilla JavaScript. It features a speed increase and score board.</p>
+                                        <a href="https://mistyrgriffin.github.io/snakegame/" target="_blank"><img class="carousel-image" src="images/snakegame_mistyrgriffin.png" alt="Snake game image">
+                                        </a>
+                                    </li>
+                                    <li class="carousel-slide">
+                                        <h3 class="slide-title">Cascade Cafe Menu</h3>
+                                        <p class="slide-description">My very first beginner CodePen challenge that I completed using HTML and CSS. It features a hidden pop-up in the Tea price section of the menu.</p>
+                                        <a href="https://mistyrgriffin.github.io/codepenchallenge_cafe/" target="_blank"><img class="carousel-image" src="images/cascadecafe_mistyrgriffin.png" alt="Coffee shop website image">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        <button class="carousel-button carousel-button-right">Next ></button>
+                        <div class="carousel-nav">
+                            <button class="carousel-indicator current-slide"></button>
+                            <button class="carousel-indicator"></button>
+                            <button class="carousel-indicator"></button>
+                            <button class="carousel-indicator"></button>
                         </div>
-                    <button class="carousel-button carousel-button-right">></button>
-                    <div class="carousel-nav">
-                        <button class="carousel-indicator current-slide"></button>
-                        <button class="carousel-indicator"></button>
-                        <button class="carousel-indicator"></button>
-                        <button class="carousel-indicator"></button>
                     </div>
                 </div>
             </div>
-            <div class="contact-section">
-                <p class="contact-title">CONTACT ME</p>
-                <div id="contact-section" class="contactme-container">
-                    <form action="https://formsubmit.co/mistyrgriffin@gmail.com" method="POST">
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_next" value="http://www.mistyrgriffin.com">
-                        <input type="text" name="name" placeholder="Name*" required>
-                        <input type="email" name="email" placeholder="Email*" required>
-                        <textarea name="message" id="message" placeholder="Message" cols="30" rows="10"></textarea>
-                        <button type="submit">SEND</button>
-                    </form>
-                <div id="social-media-section" class="socialmedia-container">
-                    <p class="socialconnections">SOCIAL</p>
-                    <a href="https://twitter.com/MistyRGriffin" target="_blank" class="fa fa-twitter"> Twitter</a>
-                    <a href="https://www.linkedin.com/in/mistyrgriffin/" target="_blank" class="fa fa-linkedin"> LinkedIn</a>
-                    <a href="https://github.com/mistyrgriffin" target="_blank" class="fa fa-github"> GitHub</a>
-                    <a href="https://codepen.io/mistyrgriffin" target="_blank" class="fa fa-codepen"> CodePen</a>
-                </div>
-                </div>
+        </main>
+        <footer class="container-footer">
+            <div class="container-footer-icons">
+                <a href="mailto:mistyrgriffin@gmail.com" target="_blank" class="fa fa-envelope"> Email</a>
+                <a href="https://www.linkedin.com/in/mistyrgriffin/" target="_blank" class="fa fa-linkedin"> LinkedIn</a>
+                <a href="https://github.com/mistyrgriffin" target="_blank" class="fa fa-github"> GitHub</a>
+                <a href="https://twitter.com/MistyRGriffin" target="_blank" class="fa fa-twitter"> Twitter</a>
             </div>
-            <footer class="footer-container">
+            <div class="copyright-info">
                 <p>&copy2021 Misty R. Griffin</p>
-            </footer>
-        </div>
-    </div>
-<script src="js/script.js"></script>
-</body>
+            </div>
+        </footer>
+        <a class="gotop-btn" href="#">Top<br><i class="fa fa-chevron-up"></i></a>
+    <script src="js/script.js"></script>
+    </body>
 </html>
