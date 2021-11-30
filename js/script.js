@@ -1,7 +1,3 @@
-var mobileMenuBtn = document.getElementById("mobile-menu-btn");
-var mobileMenuExit = document.getElementById("mobile-exit-btn");
-var mobileHeader = document.getElementById("mobileheader");
-var mobilePopUp = document.getElementById("mobile-popup");
 var track = document.querySelector(".carousel-track");
 var nextButton = document.querySelector(".carousel-button-right");
 var prevButton = document.querySelector(".carousel-button-left");
@@ -73,11 +69,3 @@ nav.addEventListener("click", (e) => {
     hideShowArrows(slides, prevButton, nextButton, targetIndex);
 });
 
-function mobileMenu() {
-    if(mobilePopUp.style.display === "none") {
-        mobilePopUp.style.display = "block"
-    } else {
-        mobilePopUp.style.display = "none"
-    }
-}
-mobileMenu();

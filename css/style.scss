@@ -140,13 +140,6 @@ h3 {
     justify-content: center;
 }
 
-// .container-hero-visual-elements {
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     max-width: 95%;
-// }
-
 .container-hero-content {
     display: flex;
     flex-direction: column;
@@ -297,26 +290,95 @@ h3 {
 .container-portfolio {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     max-width: 400px;
     height: 600px;
+    border: 1px solid var(--accentcolor);
+    padding-left: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
     margin: 0 auto 3em;
-    padding: 0;
+
+    .portfolio-title {
+        text-align: center;
+        margin-bottom: .5em;
+    }
 
     .carousel {
         position: relative;
-        width: 55%;
-        height: 450px;
-        margin: auto;
+        width: 100%;
+        height: 100%;
+        margin-bottom: 5em;
 
         p {
             font-size: 1rem;
             margin: .5em auto 2em;
+            padding-right: .5em;
+            width: 100%;
+        }
+
+        a {
+            background-color: var(--accentcolor);
+            color: var(--primarycolor);
+            font-weight: 700;
+            text-transform: uppercase;
+            border: 2px solid var(--primarycolor);
+            border-radius: 5px;
+        }
+
+        a:hover, a:focus {
+            color: white;
         }
     
         img {
             border-radius: 10px;
+            width: 100%;
             height: 100%;
+            margin: 2em auto;
+        }
+
+        .carousel-nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1em;
+        }
+
+        .carousel-button {
+            border: 0;
+            font-size: .75rem;
+            font-weight: 900;
+            cursor: pointer;
+            background: transparent;
+        }
+        
+        .carousel-button-left {
+            left: -10em;
+            color: var(--accentcolor);
+            text-shadow: 2px 2px 2px black;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .carousel-button-right {
+            right: -10em;
+            color: var(--accentcolor);
+            text-shadow: 2px 2px 2px black;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container-portfolio-btn {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .portfolio-btn {
+            padding: .25em 1em;
+            margin-right: 1em;
+            border: none;
         }
         
         .carousel-track-container {
@@ -341,37 +403,11 @@ h3 {
             width: 100%;
         }
         
-        .carousel-button {
-            position: absolute;
-            top: 0%;
-            transform: translateY(-200%);
-            border: 0;
-            font-size: .75rem;
-            font-weight: 900;
-            cursor: pointer;
-            background: transparent;
-        }
-        
-        .carousel-button-left {
-            left: -10em;
-            color: var(--accentcolor);
-            text-shadow: 2px 2px 2px black;
-            margin: 0;
-            padding: 0;
-        }
-        
-        .carousel-button-right {
-            right: -10em;
-            color: var(--accentcolor);
-            text-shadow: 2px 2px 2px black;
-            margin: 0;
-            padding: 0;
-        }
-        
         .carousel-nav {
             display: flex;
             justify-content: center;
             padding: 10px 0;
+            margin-top: 1em;
         }
         
         .carousel-indicator {
@@ -515,9 +551,6 @@ h3 {
 
     .container-portfolio {
         order: 3;
-        border-left: 1px solid var(--accentcolor);
-        border-right: 1px solid var(--accentcolor);
-        padding: 0 1em;
         margin: 0 1em;
     }
 }
@@ -562,10 +595,12 @@ h3 {
         max-width: 400px;
     }
 
-    .container-portfolio {
-        padding: 0 1em;
-        margin: 0;
-    }
+    // .container-portfolio {
+    //     width: 100%;
+    //     max-width: 400px;
+    //     padding: 0 1em;
+    //     margin: 0;
+    // }
 }
 
 .gotop-btn {

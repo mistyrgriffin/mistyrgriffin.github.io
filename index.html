@@ -35,7 +35,7 @@
             <div class="container-hero">
                 <div class="container-hero-visual-elements">
                     <video autoplay loop muted poster="images/headerimg.jfif">
-                        <source src="images/codingvid.mp4" type="video/mp4" alt="animated video of a computer screen with programming language being typed">
+                        <source src="images/codingvid1.mp4" type="video/mp4" alt="animated video of a computer screen with programming language being typed">
                         Your browser does not support the video tag.
                     </video>
                 </div>
@@ -76,38 +76,52 @@
                     </div>
                 </div>
                 <div id="portfolio-section" class="container-portfolio">
-                    <h2>Portfolio</h2>
+                    <h2 class="portfolio-title">Portfolio</h2>
                     <div class="carousel">
-                        <button class="carousel-button carousel-button-left is-hidden">< Previous</button>
+                        <div class="carousel-nav-buttons">
+                            <button class="carousel-button carousel-button-left is-hidden">< Previous</button>
+                            <button class="carousel-button carousel-button-right">Next ></button>
+                        </div>
                             <div class="carousel-track-container">
                                 <ul class="carousel-track">
                                     <li class="carousel-slide current-slide">
                                         <h3 class="slide-title">REST Countries API</h3>
                                         <p class="slide-description">Frontend Mentor advanced challenge that I completed using HTML, CSS, Vanilla JavaScript, and API. It features a dark/light theme change, search box, and dropdown filter.</p>
-                                        <a href="https://mistyrgriffin.github.io/frontendmentorchallenge_rcapi/" target="_blank"><img class="carousel-image" src="images/restcountriesapiimg.jpg" alt="REST Countries website image">
-                                        </a>
+                                        <div class="container-portfolio-btn">
+                                            <a class="portfolio-btn github-btn" href="https://github.com/mistyrgriffin/frontendmentorchallenge_rcapi" target="_blank">GitHub Repository</a>
+                                            <a class="portfolio-btn live-site-btn" href="https://mistyrgriffin.github.io/frontendmentorchallenge_rcapi/" target="_blank">Live Site</a>
+                                        </div>
+                                        <img class="carousel-image" src="images/restcountriesapiimg.jpg" alt="REST Countries website image">
                                     </li>
                                     <li class="carousel-slide">
                                         <h3 class="slide-title">Rock, Paper, Scissors</h3>
                                         <p class="slide-description">Frontend Mentor advanced challenge that I completed using HTML, CSS, Vanilla JavaScript, Flexbox, and Grid. It features a pentagonal-shaped game interface and gradient borders.</p>
-                                        <a href="https://mistyrgriffin.github.io/frontendmentorchallenge_rpsls/" target="_blank"><img class="carousel-image" src="images/rpsls_mistygriffin.png" alt="Rock, Paper, Scissors game image">
-                                        </a>
+                                        <div class="container-portfolio-btn">
+                                            <a class="portfolio-btn github-btn" href="https://github.com/mistyrgriffin/frontendmentorchallenge_rpsls" target="_blank">GitHub Repository</a>
+                                            <a class="portfolio-btn live-site-btn" href="https://mistyrgriffin.github.io/frontendmentorchallenge_rpsls/" target="_blank">Live Site</a>
+                                        </div>
+                                        <img class="carousel-image" src="images/rpsls_mistygriffin.png" alt="Rock, Paper, Scissors game image">
                                     </li>
                                     <li class="carousel-slide">
                                         <h3 class="slide-title">Snake Game</h3>
                                         <p class="slide-description">JavaScript challenge that I completed using HTML, CSS, and Vanilla JavaScript. It features a speed increase and score board.</p>
-                                        <a href="https://mistyrgriffin.github.io/snakegame/" target="_blank"><img class="carousel-image" src="images/snakegame_mistyrgriffin.png" alt="Snake game image">
-                                        </a>
+                                        <div class="container-portfolio-btn">
+                                            <a class="portfolio-btn github-btn" href="https://github.com/mistyrgriffin/snakegame" target="_blank">GitHub Repository</a>
+                                            <a class="portfolio-btn live-site-btn" href="https://mistyrgriffin.github.io/snakegame/" target="_blank">Live Site</a>
+                                        </div>
+                                        <img class="carousel-image" src="images/snakegame_mistyrgriffin.png" alt="Snake game image">
                                     </li>
                                     <li class="carousel-slide">
                                         <h3 class="slide-title">Cascade Cafe Menu</h3>
                                         <p class="slide-description">My very first beginner CodePen challenge that I completed using HTML and CSS. It features a hidden pop-up in the Tea price section of the menu.</p>
-                                        <a href="https://mistyrgriffin.github.io/codepenchallenge_cafe/" target="_blank"><img class="carousel-image" src="images/cascadecafe_mistyrgriffin.png" alt="Coffee shop website image">
-                                        </a>
+                                        <div class="container-portfolio-btn">
+                                            <a class="portfolio-btn github-btn" href="https://github.com/mistyrgriffin/codepenchallenge_cafe" target="_blank">GitHub Repository</a>
+                                            <a class="portfolio-btn live-site-btn" href="https://mistyrgriffin.github.io/codepenchallenge_cafe/" target="_blank">Live Site</a>
+                                        </div>
+                                        <img class="carousel-image" src="images/cascadecafe_mistyrgriffin.png" alt="Coffee shop website image">
                                     </li>
                                 </ul>
                             </div>
-                        <button class="carousel-button carousel-button-right">Next ></button>
                         <div class="carousel-nav">
                             <button class="carousel-indicator current-slide"></button>
                             <button class="carousel-indicator"></button>
