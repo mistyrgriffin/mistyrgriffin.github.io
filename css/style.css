@@ -111,6 +111,10 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -176,6 +180,7 @@ h3 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-left: 1.5em;
 }
 
 .container-hero-content {
@@ -219,7 +224,7 @@ h3 {
           order: 3;
   padding-bottom: 1em;
   max-width: 100%;
-  text-align: justify;
+  text-align: center;
   letter-spacing: 1.75px;
 }
 
@@ -269,8 +274,9 @@ h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 400px;
-  margin: auto;
+  width: 300px;
+  text-align: center;
+  margin: auto 1em;
 }
 
 .description {
@@ -384,7 +390,7 @@ h3 {
   padding-left: 1em;
   padding-top: 1em;
   padding-bottom: 1em;
-  margin: 0 auto 3em;
+  margin: 0 1em 3em;
 }
 
 .container-portfolio .portfolio-title {
@@ -541,16 +547,33 @@ h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: var(--primarycolor);
   color: var(--primarytextcolor);
   margin-bottom: .5em;
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
 }
 
 .container-footer .fa {
-  padding-right: 2em;
+  text-align: center;
+  padding-right: .5em;
+}
+
+.container-footer-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .container-footer-icons a {
@@ -564,6 +587,29 @@ h3 {
   color: var(--accentcolor);
   -webkit-transition: color 250ms ease;
   transition: color 250ms ease;
+}
+
+@media (min-width: 460px) {
+  .container-nav-bar {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .container-hero {
+    margin-left: 0;
+  }
+  .hero-text {
+    text-align: justify;
+  }
+  .container-about {
+    width: 400px;
+    text-align: left;
+    margin: auto;
+  }
+  .container-portfolio {
+    margin: 0 auto 3em;
+  }
 }
 
 @media (min-width: 870px) {

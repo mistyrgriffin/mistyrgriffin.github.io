@@ -91,6 +91,7 @@ h3 {
 
 .container-nav-bar {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
     background-color: var(--primarycolor);
@@ -138,6 +139,7 @@ h3 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-left: 1.5em;
 }
 
 .container-hero-content {
@@ -168,7 +170,7 @@ h3 {
     order: 3;
     padding-bottom: 1em;
     max-width: 100%;
-    text-align: justify;
+    text-align: center;
     letter-spacing: 1.75px;
 }
 
@@ -207,8 +209,9 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 400px;
-    margin: auto;
+    width: 300px;
+    text-align: center;
+    margin: auto 1em;
 }
 
 .description {
@@ -299,7 +302,7 @@ h3 {
     padding-left: 1em;
     padding-top: 1em;
     padding-bottom: 1em;
-    margin: 0 auto 3em;
+    margin: 0 1em 3em;
 
     .portfolio-title {
         text-align: center;
@@ -434,14 +437,24 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     background-color: var(--primarycolor);
     color: var(--primarytextcolor);
     margin-bottom: .5em;
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
 
     .fa {
-        padding-right: 2em;
+        text-align: center;
+        padding-right: .5em;
     }
+}
+
+.container-footer-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .container-footer-icons a {
@@ -454,6 +467,30 @@ h3 {
 .container-footer-icons a:focus {
     color: var(--accentcolor);
     transition: color 250ms ease;
+}
+
+@media (min-width: 460px) {
+    .container-nav-bar {
+        flex-direction: row;
+    }
+
+    .container-hero {
+        margin-left: 0;
+    }
+
+    .hero-text {
+        text-align: justify;
+    }
+
+    .container-about {
+        width: 400px;
+        text-align: left;
+        margin: auto;
+    }
+
+    .container-portfolio {
+        margin: 0 auto 3em;
+    }
 }
 
 @media (min-width: 870px) {
@@ -594,13 +631,6 @@ h3 {
         padding: 0;
         max-width: 400px;
     }
-
-    // .container-portfolio {
-    //     width: 100%;
-    //     max-width: 400px;
-    //     padding: 0 1em;
-    //     margin: 0;
-    // }
 }
 
 .gotop-btn {
