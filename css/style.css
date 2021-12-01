@@ -180,7 +180,7 @@ h3 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-left: 1.5em;
+  margin: auto;
 }
 
 .container-hero-content {
@@ -238,6 +238,7 @@ h3 {
   border-radius: 4px;
   text-transform: uppercase;
   font-weight: 700;
+  text-align: center;
   vertical-align: middle;
   padding: .5em 1em;
   margin-bottom: 2em;
@@ -276,7 +277,7 @@ h3 {
           align-items: center;
   width: 300px;
   text-align: center;
-  margin: auto 1em;
+  margin: auto;
 }
 
 .description {
@@ -390,7 +391,7 @@ h3 {
   padding-left: 1em;
   padding-top: 1em;
   padding-bottom: 1em;
-  margin: 0 1em 3em;
+  margin: auto;
 }
 
 .container-portfolio .portfolio-title {
