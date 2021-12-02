@@ -472,6 +472,7 @@ h3 {
 
 @media (min-width: 460px) {
     .container-nav-bar {
+        justify-content: space-around;
         flex-direction: row;
     }
 
@@ -504,6 +505,8 @@ h3 {
 
     .container-nav-bar {
         margin-bottom: 3em;
+        padding-left: 8em;
+        padding-right: 10em;
     }
 
     .container-nav-logo {
@@ -601,7 +604,7 @@ h3 {
 
 @media (min-width: 1245px) {
     video {
-        margin-right: 4em;
+        margin-right: 0;
     }
 
     .container-main {

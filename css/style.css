@@ -592,6 +592,8 @@ h3 {
 
 @media (min-width: 460px) {
   .container-nav-bar {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -622,6 +624,8 @@ h3 {
   }
   .container-nav-bar {
     margin-bottom: 3em;
+    padding-left: 8em;
+    padding-right: 10em;
   }
   .container-nav-logo {
     display: -webkit-box;
@@ -756,7 +760,7 @@ h3 {
 
 @media (min-width: 1245px) {
   video {
-    margin-right: 4em;
+    margin-right: 0;
   }
   .container-main {
     display: -webkit-box;
